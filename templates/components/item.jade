@@ -1,0 +1,5 @@
+mixin item(p, btn, img)
+  - var img_path = "'dist/img/" + img + "'";
+  .item(style!='background-image:url(#{img_path});')
+    p= p
+    button.btn.btn-default= btn
