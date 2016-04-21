@@ -1,12 +1,19 @@
-//
-  mixin item(p, btn, img)
-    - var img_path = "'dist/img/" + img + "'";
-    .item(style='background:url(#{img_path})')
-      p= p
-      button.btn.btn-default= btn
-
-section
-  h1 test headding
+section(ng-app='app' ng-controller='myCtrl')
+  h1 test headding #{name}
   
   +item("this is the item that you wish to buy", 'click me', 'buns.jpg')
   +item("this is the item that you wish to buy", 'click me', 'coffee-shop.jpg')
+  
+  
+    // Modal
+  #itemModal.modal.fade(role='dialog')
+    .modal-dialog
+      // Modal content
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal') ×
+          h4.modal-title Modal Header
+        .modal-body
+          p Some text in the modal.
+        .modal-footer
+          button.btn.btn-default(type='button', data-dismiss='modal') Close

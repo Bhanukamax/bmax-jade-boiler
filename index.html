@@ -25,23 +25,32 @@
         <!-- /.nav-collapse-->
       </div>
     </nav>
-    <!--
-    mixin item(p, btn, img)
-      - var img_path = "'dist/img/" + img + "'";
-      .item(style='background:url()')
-        p= p
-        button.btn.btn-default= btn
-    
-    -->
-    <section>
-      <h1>test headding</h1>
+    <section ng-app="app" ng-controller="myCtrl">
+      <h1>test headding </h1>
       <div style="background-image:url('dist/img/buns.jpg');" class="item">
         <p>this is the item that you wish to buy</p>
-        <button class="btn btn-default">click me</button>
+        <button type="button" data-toggle="modal" data-target="#itemModal" class="btn btn-default">click me</button>
       </div>
       <div style="background-image:url('dist/img/coffee-shop.jpg');" class="item">
         <p>this is the item that you wish to buy</p>
-        <button class="btn btn-default">click me</button>
+        <button type="button" data-toggle="modal" data-target="#itemModal" class="btn btn-default">click me</button>
+      </div>
+      <div id="itemModal" role="dialog" class="modal fade">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" data-dismiss="modal" class="close">×</button>
+              <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+              <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <footer>

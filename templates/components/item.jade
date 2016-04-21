@@ -2,4 +2,6 @@ mixin item(p, btn, img)
   - var img_path = "'dist/img/" + img + "'";
   .item(style!='background-image:url(#{img_path});')
     p= p
-    button.btn.btn-default= btn
+    button.btn.btn-default(type='button' 
+    data-toggle='modal'
+    data-target='#itemModal')= btn
